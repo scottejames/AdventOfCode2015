@@ -22,8 +22,10 @@ public class DayNine {
 		List<String> stringList = Files.readAllLines(filePath, charset);
 
 		String[] stringArray = stringList.toArray(new String[] {});
+		
 		Set<String> places = new HashSet<String>();
 		HashMap<String, Integer> costs = new HashMap<String, Integer>();
+		
 		for (String s : stringArray) {
 			// London to Dublin = 464
 			String[] tokens = s.split(" ");
