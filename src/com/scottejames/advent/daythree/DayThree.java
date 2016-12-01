@@ -12,7 +12,7 @@ public class DayThree {
 		HashMap<Pair<Integer,Integer>,Integer> map = new HashMap<Pair<Integer,Integer>,Integer>();
 		Pair<Integer,Integer> location = new Pair<Integer,Integer>(0,0);
 		Pair<Integer,Integer> robo = new Pair<Integer,Integer>(0,0);
-
+		
 		map.put(location, 1);
 		int charCount = 0;
 		for (int i = 0 ; i< content.length()/2; i++)
