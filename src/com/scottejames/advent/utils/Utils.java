@@ -1,5 +1,11 @@
 package com.scottejames.advent.utils;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,6 +26,14 @@ public class Utils {
 			matches++;
 		}
 		return matches;
+	}
+	public static String[] readFile(String fileName) throws IOException{
+		Path filePath = new File("target/classes/com/scottejames/advent" +fileName).toPath();
+		System.out.println(filePath);
+		Charset charset = Charset.defaultCharset();
+		List<String> stringList = Files.readAllLines(filePath, charset);
+		String[] stringArray = stringList.toArray(new String[] {});
+		return stringArray;
 	}
 	
 }
